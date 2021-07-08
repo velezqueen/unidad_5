@@ -1,0 +1,86 @@
+public class deberes5App {
+
+	public static void main(String[] args) {
+   //ejercicio11;
+   //ejercicio12;
+   //ejercicio13;
+   }
+
+
+
+
+public static void ejercicio11() {
+	        String texto = JOptionPane.showInputDialog("Di un dia de la semana").toLowerCase();
+	        boolean laboral = true; 
+	        
+	        switch (texto) {
+	            case ("sabado"):
+	                laboral = false;
+	                break;
+	            case ("domingo"):
+	                laboral = false;
+	                break;
+	        }
+
+	       
+	        if (laboral) {
+	            JOptionPane.showMessageDialog(null, "Es un dia laboral");
+	        }
+	        else {
+	            JOptionPane.showMessageDialog(null, "No es un dia laboral");
+	        }
+	    }
+
+	
+	    public static void ejercicio12() {
+	        String password = "P@ssw0Rd", prueva;
+	        int intentos;
+	        boolean flag = false;
+
+	        for (intentos = 3; intentos != 0 && !flag; intentos--) {
+	            prueva = JOptionPane.showInputDialog("Pon la contraeña");
+	            if (prueva.equals(password)) {
+	                flag = true;
+	            }
+	        }
+
+	        if (intentos == 0) {
+	            JOptionPane.showMessageDialog(null, "Cuenta bloqueada");
+	    }
+	        else {
+	        JOptionPane.showMessageDialog(null, "Enhorabuena");
+	        }
+	    }
+	
+	    public static void ejercicio13() {
+	        String texto = JOptionPane.showInputDialog("Di el primer num");
+	        int num1 = Integer.parseInt(texto);
+	        texto = JOptionPane.showInputDialog("Di el segundo num");
+	        int num2 = Integer.parseInt(texto);
+	        texto = JOptionPane.showInputDialog("Di el signo aritmético");
+	        double resultado = 0;
+
+	        switch (texto) {
+	            case ("+"):
+	                resultado = num1 + num2;
+	                break;
+	            case ("-"):
+	                resultado = num1 - num2;
+	                break;
+	            case ("*"):
+	                resultado = num1 * num2;
+	                break;
+	            case ("/"):
+	                resultado = num1 / num2;
+	                break;
+	            case ("^"):
+	                resultado = Math.pow(num1, num2);
+	                break;
+	            case ("%"):
+	                resultado = num1 % num2;
+	                break;
+	            default:
+	                JOptionPane.showMessageDialog(null, "Signo aritmetico arroneo");
+	        }
+	        JOptionPane.showMessageDialog(null, "Resultado " + resultado);
+	    }
